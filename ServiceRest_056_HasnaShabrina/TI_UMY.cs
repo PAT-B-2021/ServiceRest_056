@@ -71,7 +71,8 @@ namespace ServiceRest_056_HasnaShabrina
         public Mahasiswa GetMahasiswaByNIM(string nim)
         {
             Mahasiswa mhs = new Mahasiswa();
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-CKEU182R;Initial Catalog=\"TI UMY\";Persist Security Info=True;User ID=sa;Password=hasna12345");
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-CKEU182R;Initial Catalog=\"TI UMY\";Persist Security Info=True;User ID=sa;Password=hasna12345" +
+                "");
             string query = String.Format("select Nama, NIM, Prodi, Angkatan from dbo.Mahasiswa where NIM = '{0}'", nim);
             SqlCommand com = new SqlCommand(query, con);
             try
